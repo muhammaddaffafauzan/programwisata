@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transaksi</title>
+</head>
+
+    <center><p><h2>Pemesanan</h2></p></center>
+    <script language="javascript">
+    function hitungtotal()
+ {
+  var nama=(document.f10115456.inama.value);
+  var tujuan=(document.f10115456.itujuan.value);
+  var jumlahtiket=parseFloat(document.f10115456.ijumlah.value);
+  var pembayaran=parseFloat(document.f10115456.ipembayaran.value);
+  
+  var ht=0.0;
+  var sub=0.0;
+  var diskon=0.0;
+  var total=0.0;
+  var kembalian=0.0;
+
+  
+   if((tujuan=="Bukit Bintang"))
+    {  ht=10000;  }
+    else if((tujuan=="Pantai Sandranan"))
+     {   ht=15000;  }
+     else if((tujuan=="Candi Borobudur"))
+      {   ht=50000;  }
+      else if((tujuan=="Candi Prambanan"))
+       {   ht=50000;  }
+       else if ((tujuan =="Keraton Yogyakarta"))
+        {   ht=5000;  }
+        else if ((tujuan =="Malioboro"))
+         {   ht=5000;  }
+          else if ((tujuan =="Goa Pindul"))
+           {   ht=100000; }
+           else
+            {  ht=0;  }
+
+   sub=jumlahtiket*ht;
+    if(jumlahtiket >= 2 && jumlahtiket <= 7)
+     {  diskon=0.10*sub;  }
+
+   total=sub-diskon;
+   kembalian=pembayaran-total;
+    document.f10115456.otiket.value=eval(ht);
+    document.f10115456.osub.value=eval(sub);
+    document.f10115456.odiskon.value=eval(diskon);
+    document.f10115456.ototal.value=eval(total);
+    document.f10115456.okembalian.value=eval(kembalian);
+
+ }
+ </script>
+
+<form name="f10115456">
+<table border="1"align="center"width="70%">
+<tr><td width="100%"colspan="2">
+
+<tr><td width="50%"><pre>
+ Nama        :<input type="text" size="20" name="inama">
+ Tujuan      :<select name="itujuan" size="1">
+     <option value="Bukit Bintang">Bukit Bintang</option>
+     <option value="Pantai Sandranan">Pantai Sandranan</option>
+     <option value="Candi Borobudur">Candi Borobudur</option>
+     <option value="Candi Prambanan">Candi Prambanan</option>
+     <option value="Keraton Yogyakarta">Keraton Yogyakarta</option>
+     <option value="Malioboro">Malioboro</option>
+     <option value="Pendopo Lawas">Pendopo Lawas</option>
+     <option value="Goa Pindul">Goa Pindul</option>
+
+     </select>
+ Jumlah Tiket : <input type="text" size="11" name="ijumlah">
+ Membayar     :<input type="text" name="ipembayaran">
+</td></pre>
+
+<td width="50%"><pre>
+ Harga Tiket    :<input type="text" size="10" name="otiket">
+ Sub Total      :<input type="text" size="10" name="osub">
+ Diskon         :<input type="text" size="10" name="odiskon">
+ Total Bayar    :<input type="text" size="10" name="ototal">
+ kembalian      :<input type="text" size="10" name="okembalian">
+
+</td></pre>
+</tr>
+<tr>
+ <td width="100%" colspan="2">
+ <center>
+  <input type="button" value="Hitung" onclick="hitungtotal()">
+  <input type="reset" value="ulang">
+ </center>
+ </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

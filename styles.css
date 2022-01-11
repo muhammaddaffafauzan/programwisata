@@ -1,0 +1,35 @@
+.jumbotron{
+    background-image: url('img/wallpaper.jpg');
+    background-attachment: fixed;
+    color: white;
+    background-size: cover;
+    background-position: 0 -50px;
+    height: 450px;
+    padding-top: 5rem;
+    text-shadow: 100px;
+}
+section{
+    padding-top: 5rem;
+}
+
+#paket{
+    background-image: url(img/wallpaper1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+#galeri{
+    background-image: url(img/wallpaper2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+#produk{
+    background-image: url();
+    background-size: cover;
+    background-attachment: fixed;
+}
+h2{
+    color: rgb(0, 0, 0);
+}
